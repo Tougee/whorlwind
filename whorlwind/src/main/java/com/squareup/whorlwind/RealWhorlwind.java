@@ -91,8 +91,6 @@ final class RealWhorlwind extends Whorlwind {
   }
 
   @Override public void write(@NonNull String name, @Nullable ByteString value) {
-    checkCanStoreSecurely();
-
     synchronized (dataLock) {
       if (value == null) {
         storage.remove(name);
@@ -117,6 +115,10 @@ final class RealWhorlwind extends Whorlwind {
 
     return Observable.create(new FingerprintAuthOnSubscribe(fingerprintManager, storage, name, //
         readerScanning, dataLock, this));
+  }
+
+  @CheckResult @Override public Observable<ReadResult> readSimple(@NonNull String name) {
+    return Observable.create(new SimpleReadOnSubscribe(storage, name, dataLock, this));
   }
 
   /**

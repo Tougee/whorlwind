@@ -85,4 +85,6 @@ public abstract class Whorlwind {
    * emitted to the stream.
    */
   public abstract Observable<ReadResult> read(String name);
+
+  public abstract Observable<ReadResult> readSimple(String name);
 }

@@ -30,4 +30,8 @@ class NullWhorlwind extends Whorlwind {
   @Override public Observable<ReadResult> read(String name) {
     throw new UnsupportedOperationException();
   }
+
+  @Override public Observable<ReadResult> readSimple(String name) {
+    throw  new UnsupportedOperationException();
+  }
 }

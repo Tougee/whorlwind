@@ -33,4 +33,12 @@
       android:background="?android:attr/selectableItemBackground"
       android:text="Read"
       />
+
+  <Button
+      android:id="@+id/read_simple"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:background="?android:attr/selectableItemBackground"
+      android:text="Read_Simple"
+      />
 </com.squareup.whorlwind.sample.ItemView>

@@ -43,4 +43,12 @@ public final class ItemView extends LinearLayout {
       Log.e("ItemView", "Error passing read value to Consumer");
     }
   }
+
+  @OnClick(R.id.read_simple) void readSimple() {
+    try {
+      readConsumer.accept(keyView.getText().toString());
+    } catch (Exception e) {
+      Log.e("ItemView", "Error passing read value to Consumer");
+    }
+  }
 }
