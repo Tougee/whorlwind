@@ -95,7 +95,7 @@ Download
 Gradle:
 
 ```groovy
-compile 'com.github.tougee:whorlwind:1.0.2'
+compile 'com.github.tougee:whorlwind:1.0.3'
 ```
 
 
